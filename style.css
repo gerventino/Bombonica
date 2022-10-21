@@ -1,0 +1,125 @@
+body {
+    background-color: black;
+    text-align: center;
+    /* overflow: hidden; */
+}
+h1 {
+    color: rgb(255, 0, 0);
+    font-family: 'Press Start 2P', cursive;
+    margin-top: 5rem;
+    font-size: 2.5rem;
+    padding: 1rem;
+    border: solid white;
+    display: inline-block;
+    animation-name: backgroundColor;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    word-spacing: -15px;
+}
+h6 {
+  color: red;
+  font-family: 'Press Start 2P', cursive;
+  letter-spacing: 0px;
+  word-spacing: -2px;
+  margin-top: 10%;
+}
+
+.btn {
+    margin: 30px;
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    border-radius: 10%;
+    border: solid rgb(255, 255, 255) 3px;
+}
+
+.container {
+    display: block;
+    width: 50%;
+    margin: auto;
+  
+  }
+
+.green {
+    background: linear-gradient(120deg,rgb(0, 102, 0),rgb(0, 68, 0),rgb(0, 14, 0));
+}
+
+.red {
+    background: linear-gradient(120deg,rgb(204, 2, 2),rgb(102, 0, 0),rgb(34, 0, 0))
+}
+
+.yellow {
+    background: linear-gradient(120deg,rgb(212, 212, 0),rgb(104, 104, 0),rgb(32, 32, 0));
+}
+
+.blue {
+    background: linear-gradient(120deg,rgb(2, 2, 218),rgb(1, 1, 104),rgb(0, 0, 22))
+}
+
+.image1 {
+    position: absolute;
+    right: 0%;
+    bottom: 0%;
+    filter: brightness(20%);
+    
+}
+
+.image2 {
+    position: absolute;
+    left: 0%;
+    bottom: 50%;
+    width: 400px;
+    filter: brightness(5%);
+    
+}
+
+.image3 {
+    width: 300px;
+    position: absolute;
+    right: 20%;
+    bottom: 20%;
+    
+}
+
+.pressed {
+    box-shadow: 0 0 20px white;
+    background-color: grey;
+  }
+
+  @keyframes backgroundColor {
+    0% {
+        background: black;
+    }
+    25%{
+        background: white;
+    }
+    50% {
+        background: rgb(0, 0, 0);
+    }
+    75% {
+        background: white;
+    }
+    100% {
+        background: black;
+    }
+  }
+
+  @keyframes horizontal-shaking {
+    0% { transform: translateX(0) }
+    25% { transform: translateX(5px) }
+    50% { transform: translateX(-5px) }
+    75% { transform: translateX(5px) }
+    100% { transform: translateX(0) }
+   }
+
+  .game-over {
+    background: red;
+    
+  }
+
+  .animation {
+    animation-name: horizontal-shaking;
+    animation-duration: 0.5s;
+    animation-iteration-count: 10;
+  }
